@@ -14,7 +14,7 @@ int main()
   };
 
   initGame(game);
-  drawGame(game);
+  drawGame(game, snakeTiles);
 
   return 0;
 }

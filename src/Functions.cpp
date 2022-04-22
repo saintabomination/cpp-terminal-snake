@@ -20,12 +20,26 @@ void initGame(int (&game)[10][10])
   }
 }
 
-void drawGame(int game[10][10])
+void drawGame(int game[10][10], std::vector<SnakeTile> snakeTiles)
 {
   for (int y = 0; y < 10; y++)
   {
     for (int x = 0; x < 10; x++)
     {
+      bool isSnakeTile = false;
+      for (SnakeTile snakeTile : snakeTiles)
+      {
+        if (
+          snakeTile.x == x &&
+          snakeTile.y == y
+        ) {
+          std::cout << "# ";
+          isSnakeTile = true;
+        }
+      }
+
+      if (isSnakeTile) continue;
+
       switch (game[y][x])
       {
         case 1:

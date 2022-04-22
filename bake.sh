@@ -2,7 +2,7 @@
 
 PROJECT_NAME="cpp-terminal-snake"
 
-g++ -c src/Main.cpp
+g++ -c src/*.cpp
 mkdir -p build
-g++ *.o -o build/$PROJECT_NAME
+g++ *.o -I src/Headers -o build/$PROJECT_NAME
 rm *.o

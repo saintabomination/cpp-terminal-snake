@@ -20,6 +20,11 @@ void initGame(int (&game)[10][10])
   }
 }
 
+void updateGame(int (&game)[10][10], std::vector<SnakeTile> snakeTiles, Vector2 playerMovement)
+{
+  snakeTiles[0].move(playerMovement);
+}
+
 void drawGame(int game[10][10], std::vector<SnakeTile> snakeTiles)
 {
   for (int y = 0; y < 10; y++)

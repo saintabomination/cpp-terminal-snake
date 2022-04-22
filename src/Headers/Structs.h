@@ -24,6 +24,14 @@ struct SnakeTile {
     this->x = x;
     this->y = y;
   }
+
+  void move(Vector2 vector)
+  {
+    this->x += vector.x;
+    this->y += vector.y;
+  }
+  void moveX(int x) { this->x += x; }
+  void moveY(int y) { this->y += x; }
 };
 
 #endif // STRUCTS_H

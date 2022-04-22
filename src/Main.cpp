@@ -12,6 +12,7 @@ int main()
     SnakeTile(4, 3),
     SnakeTile(5, 3)
   };
+  Vector2 playerMovement(1, 0);
 
   initGame(game);
   drawGame(game, snakeTiles);

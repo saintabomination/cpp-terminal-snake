@@ -12,7 +12,11 @@ void initGame(int (&game)[10][10])
   {
     for (int x = 0; x < 10; x++)
     {
-      game[y][x] = 1;
+      // Creating the walls
+      game[y][x] = (
+        x == 0 || y == 0 ||
+        x == 9 || y == 9
+      ) ? 1 : 0;
     }
   }
 }
@@ -27,9 +31,11 @@ void drawGame(int game[10][10])
       {
         case 1:
           std::cout << '#';
+          break;
 
         default:
           std::cout << ' ';
+          break;
       }
       std::cout << ' ';
     }
